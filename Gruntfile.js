@@ -131,7 +131,6 @@ module.exports = function(grunt) {
           "js/initial.js",
           "js/jquery.easing.1.3.js",
           "js/animation.js",
-          "js/velocity.min.js",
           "js/hammer.min.js",
           "js/jquery.hammer.js",
           "js/global.js",
@@ -168,7 +167,6 @@ module.exports = function(grunt) {
           "js/initial.js",
           "js/jquery.easing.1.3.js",
           "js/animation.js",
-          "js/velocity.min.js",
           "js/hammer.min.js",
           "js/jquery.hammer.js",
           "js/global.js",
@@ -254,7 +252,6 @@ module.exports = function(grunt) {
             "initial.js",
             "jquery.easing.1.3.js",
             "animation.js",
-            "velocity.min.js",
             "hammer.min.js",
             "jquery.hammer.js",
             "global.js",
@@ -541,7 +538,7 @@ module.exports = function(grunt) {
     // Removes console logs
     removelogging: {
       source: {
-        src: ["js/**/*.js", "!js/velocity.min.js"],
+        src: ["js/**/*.js"],
         options: {
           // see below for options. this is optional.
         }
