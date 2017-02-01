@@ -16,7 +16,8 @@
       gutter: 0, // Spacing from edge
       belowOrigin: false,
       alignment: 'left',
-      stopPropagation: false
+      stopPropagation: false,
+      onAnimationComplete: null,
     };
 
     // Open dropdown.
@@ -171,6 +172,9 @@
             easing: 'easeOutCubic',
             complete: function() {
               $(this).css('height', '');
+              if (curr_options.onAnimationComplete) {
+                curr_options.onAnimationComplete();
+              }
             }
           })
           .animate( {opacity: 1}, {queue: false, duration: curr_options.inDuration, easing: 'easeOutSine'});
